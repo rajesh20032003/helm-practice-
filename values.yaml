@@ -1,0 +1,18 @@
+#@param replica number of nginx replicas
+replica: 2
+
+#@param for image settings of nginx 
+#@param for image.name 
+#@param for image.tag
+image:
+  name: nginx
+  tag: "1.27.0"
+  containerPort: 80
+
+#@param for service type and port
+#@param service.type for service type 
+#@param for port of the service 
+service:
+  enabled: true 
+  type: ClusterIP
+  port: 80 
